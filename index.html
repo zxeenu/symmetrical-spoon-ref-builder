@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <header>
+      <h1 class="header">Bibtex to Uwe-Harvard Reference Converter!</h1>
+    </header>
+    <div class="main">
+      <form id="frm1" action="#">
+        <br />
+        <textarea id="input-box" type="text" name="name" /></textarea><br />
+      </form>
+      <button onclick="myFunction()">Convert!</button>
+	  <br>
+      <p id="converted_output"></p>
+    </div>
+
+    <script src="uweharward.js"></script>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("frm1");
+        var text = "";
+        var i;
+        for (i = 0; i < x.length; i++) {
+          text += x.elements[i].value + "<br>";
+        }
+        try {
+          text = convert_to_uweharvard_from_bibtext(text);
+        } catch (e) {
+          text = "You gave an invalid input!";
+        }
+
+        document.getElementById("converted_output").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

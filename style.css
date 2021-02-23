@@ -1,0 +1,22 @@
+.main {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+}
+
+#input-box {
+  width: 800px;
+  height: 200px;
+  font-size: 14pt;
+}
+
+#converted_output {
+  font-size: 20px;
+}
+
+/* Universally applied font */
+* {
+  font-family: monospace;
+}
